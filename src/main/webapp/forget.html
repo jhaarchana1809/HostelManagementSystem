@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - Saraswati Girls Hostel</title>
+    <link rel="stylesheet" href="css/adminforgotpassword.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+     <!-- Header Section -->
+     
+    <header>
+        <div class="logo-container">
+            <img src="images/girlsHostelLogo.png" alt="Saraswati Girls Hostel Logo" class="logo">
+        </div>
+        
+    </header>
+
+    <!-- Forgot Password Form Section -->
+    <main>
+        <div class="password-container">
+            <form id="forgotPasswordForm" class="password-form" action="adminforget" method="post">
+                <h2>Reset Your Password</h2>
+                
+                <div class="input-group">
+                    <label for="email"><i class="fa-regular fa-envelope"></i> Email Address</label>
+                    <input type="email" id="emailId" name="emailId" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                    <label for="npassword"><i class="fa-solid fa-lock"></i>New Password</label>
+                    <input type="password" id="npassword" name="npassword" placeholder="Enter new passwoed" required>
+                    </div>
+                    <div class="input-group">
+                    <label for="password"><i class="fa-solid fa-lock"></i> Confirm Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter confirm password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+                <p class="back-to-login"><a href="adminlogin.html">Back to Login</a></p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Saraswati Girls Hostel | All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Section -->
+   <!--  <script>
+        // Form handling and validation
+        const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+
+        forgotPasswordForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+
+            // Simple validation to check if the email field is filled
+            if (email === "") {
+                alert("Please enter your registered email address.");
+            } else {
+                // Simulating the email sending process
+                alert(`A password reset link has been sent to ${email}. Please check your inbox.`);
+                
+                // Clear the form
+                forgotPasswordForm.reset();
+            }
+        });
+    </script> -->
+</body>
+
+</html>

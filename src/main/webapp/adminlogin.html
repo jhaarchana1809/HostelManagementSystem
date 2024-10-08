@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Saraswati Girls Hostel</title>
+    <link rel="stylesheet" href="css/adminlogin.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="bg-light py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo-container">
+                <img src="images/girlsHostelLogo.png" alt="Saraswati Girls Hostel Logo" class="img-fluid" style="max-height: 70px;">
+            </div>
+            <div class="login-header">
+                <h1 class="text-center">Saraswati Girls Hostel - Admin Login</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Login Form Section -->
+    <main class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
+            <form action="admin" method="post" class="needs-validation" novalidate>
+                <div class="form-group mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email-id" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" required>
+                    <div class="invalid-feedback">Password is required.</div>
+                </div>
+                <div class="d-grid">
+                    <input type="submit" class="btn btn-primary" value="Login">
+                </div>
+                <p class="text-center mt-3"><a href="forget.html">Forgot Password?</a></p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-light text-center py-3 shadow-sm">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Saraswati Girls Hostel | All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        (function () {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+</body>
+
+</html>
